@@ -24,3 +24,5 @@ function passwordGen(){
   }).join('');
   return /(?=.*[a-z].*)(?=.*[A-Z].*)(?=.*\d.*)^.{6,20}$/.test(pass) ? pass : passwordGen();
 }
+
+// or
