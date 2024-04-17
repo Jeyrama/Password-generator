@@ -13,3 +13,6 @@ Note:
   all characters should have less than 50% occurance. 
   Based on extensive tests, the normal rate is around 35%.
 */
+
+
+// Solution
