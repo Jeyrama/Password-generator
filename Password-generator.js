@@ -26,3 +26,14 @@ function passwordGen(){
 }
 
 // or
+
+const passwordGen = () => {
+  let pass;
+  const length = Math.floor((Math.random() * 15 + 6));
+  const chars = `0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`;
+  do {
+    pass = ``;
+    for (let i = 0; i < length; i++) pass += chars[Math.floor(Math.random() * 62)]
+  } while (!/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])/.test(pass));
+  return pass
+};
