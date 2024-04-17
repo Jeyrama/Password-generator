@@ -16,3 +16,11 @@ Note:
 
 
 // Solution
+
+function passwordGen(){
+  let pass = Array.apply(null, Array(Math.floor(Math.random()*(20-6+1)+6))).map(function(){
+    let c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    return c.charAt(Math.random() * c.length);
+  }).join('');
+  return /(?=.*[a-z].*)(?=.*[A-Z].*)(?=.*\d.*)^.{6,20}$/.test(pass) ? pass : passwordGen();
+}
